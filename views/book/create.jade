@@ -1,0 +1,42 @@
+doctype
+html
+  head
+    title Add new Book
+  body
+    h3 Book Details
+     form(id='form', method='post', action='/book/create')
+      label(for='id') ISBN
+      input(type='number', id='id', name='id')
+      <br/><br/>
+      label(for='title') Title
+      input(type='text', id='title', name='title')
+      <br/><br/>
+      label(for='author') Author
+      input(type='text', id='author', name='author')
+      <br/><br/>
+      label(for='publisher') Publisher
+      input(type='text', id='publisher', name='publisher')
+      <br/><br/>
+      label(for='publishedDate') Published Date
+      input(type='date', id='publishedDate', name='publishedDate')
+      <br/><br/>
+      label(for='price') Price
+      input(type='number', id='price', name='price')
+      <br/><br/>
+      label(for='genre') Genre   
+      select(name='genre')
+        option(value = "Mystery") Mystery
+        option(value = "Thriller") Thriller
+        option(value = "Horror") Horror
+        option(value = "Fiction") Fiction
+        option(value = "Romance") Romance
+        option(value = "Drama") Drama
+      <br/><br/>
+
+      label(for='format') Format   
+      select(name='format')
+        option(value = "Hard Copy") Hard Copy
+        option(value = "E-Book") E-Book
+        option(value = "Paper Back") Paper Back
+      <br/><br/>
+      input(type='submit', value='Add Book')

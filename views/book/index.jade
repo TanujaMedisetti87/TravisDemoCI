@@ -1,0 +1,36 @@
+doctype
+html
+  head
+    title=title
+  body
+    h3 Books
+    table
+      tr
+        th ISBN
+        th Title
+        th Author
+        th Publisher
+        th Date
+        th Price
+        th Genre
+        th Format
+        th  
+        th  
+      each item in books
+        tr
+          td <b>#{item.id}
+          td #{item.title}
+          td #{item.author}
+          td #{item.publisher}
+          td #{item.publishedDate}
+          td #{item.price}
+          td #{item.genre}
+          td #{item.format}
+          td
+            a(href='/book/edit/#{item.id}') Edit
+          td
+            a(href='/book/delete/#{item.id}') Delete
+    p
+    #menu
+      a(href='/book/create') Add Book
+
